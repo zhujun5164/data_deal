@@ -1,6 +1,6 @@
 import cv2
 import os
-import tqdm
+from tqdm import tqdm
 import json
 
 img_dir = 'G:/data/CV/table/datamy/images'
@@ -37,8 +37,8 @@ for n, img_name in enumerate(tqdm(img_lists)):
     
     images.append({
                     'file_name': img_name,
-                    'width': w,
-                    'heigth': h,
+                    'width': W,
+                    'heigth': H,
                     'id': n
                     })
     
