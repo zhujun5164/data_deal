@@ -48,9 +48,9 @@ for n, img_name in enumerate(tqdm(img_lists)):
             x_c, y_c, w, h = float(_txt_data[1]) * W, float(_txt_data[2]) * H, float(_txt_data[3]) * W, float(_txt_data[4]) * H
             label = int(_txt_data[0]) + 1
             x1 = round(x_c - w / 2)
-            x2 = round(x_c + w / 2)
             y1 = round(y_c - h / 2)
-            y2 = round(y_c + h / 2)
+            w = round(w)
+            h = round(h)
             
             annotations.append({
                                 'category_id': label,
@@ -58,7 +58,7 @@ for n, img_name in enumerate(tqdm(img_lists)):
                                  'iscrowd': 0,
                                  'id': m,
                                  'image_id': n,
-                                 'bbox': [x1, y1, x2, y2]
+                                 'bbox': [x1, y1, w, h]
                                 })
             m += 1
             
