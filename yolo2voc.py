@@ -38,7 +38,7 @@ for n, img_name in enumerate(tqdm(img_lists)):
     images.append({
                     'file_name': img_name,
                     'width': W,
-                    'heigth': H,
+                    'height': H,
                     'id': n
                     })
     
